@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:glassview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/BgImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/LolipopBg" />
+        </FrameLayout>
+    </ScrollView>
+    <glassviewdroid.GlassView
+        android:id="@+id/TopGlassView"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_gravity="top"
+        android:background="#5000">
+        <TextView
+            android:id="@+id/PromptTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="BlurRadius (0 ~ 25)"
+            android:textSize="18sp"
+            android:textColor="@android:color/white" />
+        <SeekBar
+            android:id="@+id/SeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/PromptTxt"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:progress="5"
+            android:max="25" />
+    </glassviewdroid.GlassView>
+    <glassviewdroid.GlassView
+        android:id="@+id/BottomGlassView"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_gravity="bottom"
+        android:background="#55ffffff" />
+</merge>
