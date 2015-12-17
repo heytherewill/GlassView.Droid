@@ -29,7 +29,6 @@ namespace GlassViewDroid
         private Canvas _blurCanvas;
         private Rect _destRect;
 
-        private int _downSampling = DefaultDownSampling;
         private float _scaleFactor;
 
         private bool _parentViewDrawn;
@@ -97,6 +96,18 @@ namespace GlassViewDroid
             }
         }
 
+		private int _downSampling = DefaultDownSampling;
+		public int DownSampling 
+		{
+			get 
+			{
+				return _downSampling;
+			}
+			set 
+			{
+				_downSampling = value;
+			}
+		}
 
         private float _blurRadius = DefaultBlurRadius;
         public float BlurRadius
